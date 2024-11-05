@@ -5,6 +5,7 @@ const http = require('http'); // no need for path because its a built in module 
 const port = 3000;
 const host = 'localhost'; // or use 127.0.0.1 if it doesnt work
 
+// there are 2 streams going: request and response
 const server = http.createServer((request, response) => {
     console.log('server got request');
     response.writeHead(200, { // status code 200 (no errors) then I tell what data I send back: needs to be there that the browser can render it
