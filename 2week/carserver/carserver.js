@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
         resultHtml = createModelsList(getAllModels());
     }
     else if (route === '/search') {                 // use routes to write data
-        if (searchParams.has('key') && searchParams.has('value')) {
+        if (searchParams.has('key') && searchParams.has('value')) {  // to search: http://localhost:3000/search?key=license&value=ABC-1
             const key = searchParams.get('key');
             const value = searchParams.get('value');
             resultHtml = createCarsHtml(getCar(key, value));
