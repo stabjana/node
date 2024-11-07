@@ -16,7 +16,39 @@ async function sendFile(res, filePath, contentType = 'text/html') {
         res.end(`Error: ${error.message}`);
     }
 }
-
 // we can now change the file without having to rewrite the code here
 
-module.exports = { sendFile }
+// new Function!!!
+
+const allowedFormats = ['application/x-www-form-urlencoded', 'application/json'] // get the form data in that content type and the json format --- we car parse those formats with this ft
+
+async function getEncodedPostData(request) {
+    return new Promise((resolve, reject) => {
+
+        const type = request.headers['content-type'];
+        if (allowedFormats.includes(type)) {
+            const databuffer = [];
+            // on method recognises an incoming event
+            request.on('data', fragment => databuffer.push(fragment));
+            request.on('end', () => {
+                const data = Buffer.concat(databuffer).toString();
+                if (type === 'application/json') {
+                    return resolve(JSON.parse(data)); // converting the data to an JS object
+                }
+                else {
+                    const params = new URLSearchParams(data);
+                    const jsonResult = {};
+                    params.forEach((value, name) => jsonResult[name] = value);
+                    return resolve(jsonResult);
+                }
+            });
+            request.on('error', () => reject('Error during transmission'));
+        }
+        else {
+            reject('Unsupported Content Type');
+        }
+    })
+}
+
+
+module.exports = { sendFile, getEncodedPostData }
