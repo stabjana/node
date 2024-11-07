@@ -17,6 +17,8 @@
         resultset = document.getElementById('resultset');
         searchKey = document.getElementById('searchKey');
         searchValue = document.getElementById('searchValue'); // these are slow operations, you should store them in var to use them later, so you only do it once here.
+
+        document.getElementById('submit').addEventListener('click', send);
     }
 
 })();
