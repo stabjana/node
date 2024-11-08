@@ -29,14 +29,14 @@ async function getEncodedPostData(request) {
         if (allowedFormats.includes(type)) {
             const databuffer = [];
             // on method recognises an incoming event
-            request.on('data', fragment => databuffer.push(fragment));
+            request.on('data', fragment => databuffer.push(fragment)); //
             request.on('end', () => {
-                const data = Buffer.concat(databuffer).toString();
+                const data = Buffer.concat(databuffer).toString(); //
                 if (type === 'application/json') {
                     return resolve(JSON.parse(data)); // converting the data to an JS object
                 }
                 else {
-                    const params = new URLSearchParams(data);
+                    const params = new URLSearchParams(data); // wozu? was muss man machen damit der fall eintritt?
                     const jsonResult = {};
                     params.forEach((value, name) => jsonResult[name] = value);
                     return resolve(jsonResult);
