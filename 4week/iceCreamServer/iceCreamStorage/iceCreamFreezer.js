@@ -10,7 +10,7 @@ const jsonPath = path.join(__dirname, 'iceCream.json');
 async function getAllFlavours() {
     try {
         const data = await read(jsonPath);
-        const iceCream = await JSON.parse(data.fileData);
+        const iceCream = await JSON.parse(data.fileData); // its not static, it always returns a promise
 
         return Object.keys(iceCream);
 
