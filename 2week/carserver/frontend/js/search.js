@@ -21,12 +21,34 @@
         document.getElementById('submit').addEventListener('click', send);
     }
 
+    async function send() {
+        try {
+            const key = searchKey.value;
+            const value = searchValue.value;
+
+            resultset.innerHTML = '';
+
+            const data = await fatech(`http://localhost:3000/search?key=${key}&value=${value}`,
+                { mode: 'cors' }
+            );
+            const cars = await data.json();
+
+            for (const car of cars) {
+                const row = tr.cloneNode(false);
+                row.appendChild(crerateCell(car.model));
+                row.appendChild(crerateCell(car.license));
+                resultset.appendChild(row);
+            }
+
+        } catch (error) {
+            // put some error here
+        }
+    } // end of send
+
+    function createCell(text) {
+        const cell = td.cloneNode(false);
+        cell.textContent = text;
+        return cell;
+    }
+
 })();
-
-
-
-function createCell(text) {
-    const td = document.createElement('td');
-    td.textContent = text;
-    return td;
-}

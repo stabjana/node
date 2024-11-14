@@ -23,3 +23,10 @@ main {
     justify-items: center;
     align-items: center;
 }
+
+#searchparameters {
+    display: grid;
+    row-gap: 1em;
+    justify-items: center;
+    align-items: center;
+}

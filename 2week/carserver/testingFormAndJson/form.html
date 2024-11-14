@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="/styles/basicstyles.css">
+    <script src="/index.js"></script>
 </head>
 
 <body>
     <h1>Form Example</h1>
     <form action="/formdata" method="POST">
         <p>
-            <label>Firstname: <input type="text" name="firstname"></label>
+            <label>Firstname: <input type="text" name="firstname" id="firstname"></label>
         </p>
         <p>
-            <label>Lastname: <input type="text" name="lastname"></label>
+            <label>Lastname: <input type="text" name="lastname" id="lastname"></label>
         </p>
         <button type="submit">Submit</button>
     </form>
