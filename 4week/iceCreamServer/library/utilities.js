@@ -49,4 +49,4 @@ function isIn(route, ...routes) {
     return false;
 }
 
-module.exports = { read, send, sendJson };
+module.exports = { read, send, sendJson, isIn };

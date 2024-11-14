@@ -1,6 +1,6 @@
 'use strict';
 
-const data = require('./iceCreamStorage/iceCream.json');
+const data = require('./iceCreamStorage/iceCreams.json');
 /* console.log(data);
 
 console.log(Object.keys(data)); */
