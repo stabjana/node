@@ -1,0 +1,51 @@
+[
+    {
+        "id": 4,
+        "name": "Xunil 4.7",
+        "type": "tabletop",
+        "price": 300,
+        "processor": "MotorOlè"
+    },
+    {
+        "id": 3,
+        "name": "King 3000",
+        "type": "pocket computer",
+        "price": 200,
+        "processor": "X-Force"
+    },
+    {
+        "id": 7,
+        "name": "GameDelux",
+        "type": "gameover",
+        "price": 1500,
+        "processor": "MinPower"
+    },
+    {
+        "id": 6,
+        "name": "Cera 2400",
+        "type": "embedded",
+        "price": 2000,
+        "processor": "Brain 456"
+    },
+    {
+        "id": 1,
+        "name": "BigFlop Mark II",
+        "type": "server",
+        "price": 100,
+        "processor": "Selenium II"
+    },
+    {
+        "id": 5,
+        "name": "Beast II",
+        "type": "supercomputer",
+        "price": 700,
+        "processor": "BNE"
+    },
+    {
+        "id": 2,
+        "name": "MaxEffect 2000",
+        "type": "laptop",
+        "price": 499,
+        "processor": "PiTron 3"
+    }
+]
