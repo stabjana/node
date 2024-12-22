@@ -1,0 +1,27 @@
+html{
+    font-size: 100%;
+}
+
+main{
+    display: grid;
+    row-gap: 1em;
+    justify-items: center;
+    align-items: center;
+}
+#searchparameters{
+    display: grid;
+    row-gap: 0.25em;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    background-color: bisque;
+}
+
+table, th,td{
+    border:0.1em solid black;
+    padding:0.25em;
+}

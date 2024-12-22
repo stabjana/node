@@ -1,0 +1,32 @@
+html {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: aliceblue;
+}
+
+table,
+th,
+td {
+    border: solid 0.1rem black;
+    padding: 0.25rem;
+}
+
+main {
+    display: grid;
+    row-gap: 1em;
+    justify-items: center;
+    align-items: center;
+}
+
+#searchparameters {
+    display: grid;
+    row-gap: 1em;
+    justify-items: center;
+    align-items: center;
+}

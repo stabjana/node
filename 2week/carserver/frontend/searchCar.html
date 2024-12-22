@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Car</title>
+    <link rel="stylesheet" href="styles/basicstyles.css">
+</head>
+
+<body>
+    <main>
+        <h1>Search Cars</h1>
+        <div id="searchparameters">
+            <label>Key: <input type="text" id="searchKey"></label>
+            <label>Value: <input type="text" id="searchValue"></label>
+            <button id="submit">Submit</button>
+            <script src="./js/search.js"></script>
+        </div>
+        <table id="result">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>license</th>
+                </tr>
+            </thead>
+            <tbody id="resultset"></tbody>
+        </table>
+        <a href="menu.html">Menu</a>
+    </main>
+
+</body>
+
+</html>
